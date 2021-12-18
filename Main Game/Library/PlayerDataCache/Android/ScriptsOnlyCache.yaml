@@ -3,11 +3,13 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - BoxFound
     - BoxHider
-    - CanvasClose
     - ChangeScene
-    - MenuButtonPush
+    - FadeCanvas
+    - MenuScript
+    - OnSceneLoad
     - PlayQuickSound
     - StartGame
+    - TeleportAreaWithFade
     - TeleportPlayer
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputActionAsset
@@ -61,7 +63,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
     Unity.XR.Interaction.Toolkit.dll:
-    - UnityEngine.XR.Interaction.Toolkit.ActionBasedContinuousMoveProvider
     - UnityEngine.XR.Interaction.Toolkit.ActionBasedController
     - UnityEngine.XR.Interaction.Toolkit.ActionBasedSnapTurnProvider
     - UnityEngine.XR.Interaction.Toolkit.Inputs.InputActionManager
@@ -156,6 +157,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -175,15 +178,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2542}
     - Class: 114
-      Script: {instanceID: 2648}
+      Script: {instanceID: 2646}
     - Class: 114
-      Script: {instanceID: 2824}
+      Script: {instanceID: 2822}
     - Class: 114
-      Script: {instanceID: 2846}
+      Script: {instanceID: 2844}
+    - Class: 114
+      Script: {instanceID: 3252}
+    - Class: 114
+      Script: {instanceID: 3324}
     - Class: 114
       Script: {instanceID: 3404}
     - Class: 114
       Script: {instanceID: 3448}
+    - Class: 114
+      Script: {instanceID: 3720}
     - Class: 114
       Script: {instanceID: 3924}
     - Class: 114
@@ -194,6 +203,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 4400}
     - Class: 114
       Script: {instanceID: 5082}
+    - Class: 114
+      Script: {instanceID: 5414}
     - Class: 114
       Script: {instanceID: 5470}
     - Class: 114
@@ -242,6 +253,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 225
       Script: {instanceID: 0}
+    - Class: 258
+      Script: {instanceID: 0}
     Assets/Scenes/Menu.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -276,8 +289,6 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 588}
-    - Class: 114
       Script: {instanceID: 592}
     - Class: 114
       Script: {instanceID: 602}
@@ -296,23 +307,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2002}
     - Class: 114
-      Script: {instanceID: 2146}
-    - Class: 114
       Script: {instanceID: 2302}
     - Class: 114
       Script: {instanceID: 2484}
     - Class: 114
       Script: {instanceID: 2586}
     - Class: 114
-      Script: {instanceID: 2634}
+      Script: {instanceID: 2646}
     - Class: 114
-      Script: {instanceID: 2648}
+      Script: {instanceID: 2822}
     - Class: 114
-      Script: {instanceID: 2824}
+      Script: {instanceID: 2844}
     - Class: 114
-      Script: {instanceID: 2846}
+      Script: {instanceID: 3252}
     - Class: 114
-      Script: {instanceID: 3326}
+      Script: {instanceID: 3324}
+    - Class: 114
+      Script: {instanceID: 3354}
     - Class: 114
       Script: {instanceID: 3404}
     - Class: 114
@@ -323,6 +334,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3550}
     - Class: 114
       Script: {instanceID: 3676}
+    - Class: 114
+      Script: {instanceID: 3720}
     - Class: 114
       Script: {instanceID: 3804}
     - Class: 114
@@ -344,15 +357,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4658}
     - Class: 114
-      Script: {instanceID: 4678}
+      Script: {instanceID: 5082}
     - Class: 114
       Script: {instanceID: 5396}
+    - Class: 114
+      Script: {instanceID: 5414}
     - Class: 114
       Script: {instanceID: 5416}
     - Class: 114
       Script: {instanceID: 5470}
     - Class: 114
       Script: {instanceID: 5480}
+    - Class: 114
+      Script: {instanceID: 5622}
     - Class: 114
       Script: {instanceID: 5680}
     - Class: 114
@@ -409,8 +426,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 8178}
     - Class: 114
       Script: {instanceID: 8248}
-    - Class: 114
-      Script: {instanceID: 22862}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -688,7 +703,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerToggle
   - hash:
       serializedVersion: 2
-      Hash: 660ef7ae9a7293a847cfe7368a9358e8
+      Hash: 74822d1eccfc0770dd8c2f92aaef7ef4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BoxFound
@@ -722,12 +737,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.Interaction.Toolkit.dll
     namespaceName: UnityEngine.XR.Interaction.Toolkit
     className: XRTintInteractableVisual
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MenuButtonPush
   - hash:
       serializedVersion: 2
       Hash: f97c73485ace05715ab217e1fe7b1b92
@@ -886,13 +895,19 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChangeScene
+  - hash:
+      serializedVersion: 2
       Hash: ce66de8a2daf1f400e6c7f3516d2753e
     assemblyName: Unity.RenderPipelines.Universal.Runtime.dll
     namespaceName: UnityEngine.Rendering.Universal
     className: UniversalAdditionalCameraData
   - hash:
       serializedVersion: 2
-      Hash: a4a1b0003038f92f38ea35cba1bdf141
+      Hash: d7d895c34173b1fbae1318d5612c46db
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BoxHider
@@ -1435,7 +1450,7 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: NewBehaviourScript
+    className: MenuScript
   - hash:
       serializedVersion: 2
       Hash: b6587406c68d0129fae6eaed912a4cfa
@@ -2132,12 +2147,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ChangeScene
   platform: 13
   scenePathNames:
   - Assets/Scenes/Menu.unity

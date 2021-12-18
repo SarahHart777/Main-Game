@@ -29,16 +29,14 @@ public class StartGame : MonoBehaviour
         {
             Debug.Log("numFound = 1");
             halfPopUp.gameObject.SetActive(true);
-            halfPopUp.transform.position = Camera.main.transform.position + Camera.main.transform.up + Camera.main.transform.forward * distance;
+            halfPopUp.transform.position = Camera.main.transform.position + Camera.main.transform.forward * distance;
             halfPopUp.transform.rotation = new Quaternion(0.0f, Camera.main.transform.rotation.y, 0.0f, Camera.main.transform.rotation.w);
-            Time.timeScale = 0.0f;
         }
        else if (numFound == 2)
         {
-            Time.timeScale = 0.0f;
             Debug.Log("numFound = 2");
             gameOverPopUp.gameObject.SetActive(true);
-            gameOverPopUp.transform.position = Camera.main.transform.position + Camera.main.transform.up + Camera.main.transform.forward * distance;
+            gameOverPopUp.transform.position = Camera.main.transform.position + Camera.main.transform.forward * distance;
             gameOverPopUp.transform.rotation = new Quaternion(0.0f, Camera.main.transform.rotation.y, 0.0f, Camera.main.transform.rotation.w);
             Debug.Log("Game Over");
 
