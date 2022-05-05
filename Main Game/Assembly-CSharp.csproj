@@ -117,6 +117,18 @@
     <Compile Include="Assets\_Course Library\Scripts\Actions\LaunchProjectile.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Conditions\OnVelocity.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\DestroyObject.cs" />
+    <Compile Include="Assets\GameAudio\Scripts\AdaptiveAudioManager.cs" />
+    <Compile Include="Assets\GameAudio\Scripts\AxeAudioCollider.cs" />
+    <Compile Include="Assets\GameAudio\Scripts\AudioWeatherVane.cs" />
+    <Compile Include="Assets\GameAudio\Scripts\_AxeController.cs" />
+    <Compile Include="Assets\GameAudio\Scripts\AdaptiveAudioTrigger.cs" />
+    <Compile Include="Assets\GameAudio\Scripts\EnvironmentalZoneManager.cs" />
+    <Compile Include="Assets\GameAudio\Scripts\AxeController.cs" />
+    <Compile Include="Assets\GameAudio\Scripts\GameMenu.cs" />
+    <Compile Include="Assets\GameAudio\Scripts\RandomAudioController.cs" />
+    <Compile Include="Assets\GameAudio\Scripts\Singleton.cs" />
+    <Compile Include="Assets\GameAudio\Scripts\EnvironmentalZone.cs" />
+    <Compile Include="Assets\GameAudio\Scripts\MusicLooper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

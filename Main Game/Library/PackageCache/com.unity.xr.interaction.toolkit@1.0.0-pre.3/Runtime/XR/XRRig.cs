@@ -18,7 +18,7 @@ namespace UnityEngine.XR.Interaction.Toolkit
     [HelpURL(XRHelpURLConstants.k_XRRig)]
     public class XRRig : MonoBehaviour
     {
-        const float k_DefaultCameraYOffset = 1.36144f;
+        const float k_DefaultCameraYOffset = 2.0f;
 
         [SerializeField]
         [Tooltip("The \"Rig\" GameObject is used to refer to the base of the XR Rig, by default it is this GameObject." +
