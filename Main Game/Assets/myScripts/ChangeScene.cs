@@ -6,8 +6,18 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void NextScene()
+    public void MainScene()
     {
         SceneManager.LoadScene("Main_Area");
+    }
+
+    public void MazeScene()
+    {
+        SceneManager.LoadScene("Maze");
+    }
+
+    public void EndScene()
+    {
+        SceneManager.LoadScene("End_Scene");
     }
 }
